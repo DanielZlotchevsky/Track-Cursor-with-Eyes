@@ -1,0 +1,164 @@
+
+.container {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    margin: auto;
+    top: 20%;
+    left: 35%;
+}
+.owl {
+    position: absolute;
+    background-color: burlywood;
+    height: 80%;
+    width: 100%;
+    top: 10%;
+    left: 0%;
+    border-radius: 50%;
+}
+/* #region ears */
+.ear-r, .ear-l {
+    height: 0;
+    width: 0;
+    border-bottom: 150px solid #a3513b;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    position: absolute;
+    z-index: -2;
+}
+
+.ear-l {
+    top: -2%;
+    left: -6%;
+    transform: rotate(-30deg);
+}
+.ear-r {
+    top: -2%;
+    right: -6%;
+    transform: rotate(30deg);
+}
+/* #endregion ears */
+
+/* #region eyes */
+.eye-l {
+    left: 10%;
+    top: 20%;
+}
+
+.eye-r {
+    left: 61%;
+    top: -16%;
+}
+
+.eye-l, .eye-r {
+    position: relative;
+    height: 36%;
+    width: 28.5%;
+    background-color: #a3513b;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.eyeball {
+    content: '';
+    position: absolute;
+    height: 89%;
+    width: 89%;
+    background: radial-gradient(yellow, yellow, orange);
+    border-radius: 50%;
+    position: absolute;
+    left: 6%;
+    top: 5%;
+    overflow: hidden;
+}
+
+.ball {
+    height: 30%;
+    width: 30%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 34%;
+    left: 34%;
+}
+
+.eyelid {
+    height: 110%;
+    width: 100%;
+    background-color: #a3513b;
+    position: relative;
+    bottom: 90%;
+    right: -1%;
+    animation-name: blink;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+@keyframes blink {
+    0% {
+
+    }
+    5% {
+        transform: translateY(80%);
+    }
+    10% {
+        transform: translateY(0%);
+    }
+}
+/* #endregion eyes */
+
+/* #region Beak */
+.beak {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #ffcc30;
+    border-radius: 50%;
+    position: relative;
+    bottom: 15%;
+    left: 44%;
+    z-index: 3;
+}
+
+.lowerbeak {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 19.5%;
+    left: 45.7%;
+    border-top: 100px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    opacity: 100%;
+    z-index: -2;
+}
+.lowerbeak2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 18.5%;
+    left: 45.7%;
+    border-top: 100.9px solid #ffcc30;
+    border-left: 30.5px solid transparent;
+    border-right: 30.5px solid transparent;
+    z-index: -1;
+}
+
+.owl:hover .lowerbeak {
+    display: inline-block;
+    z-index: 2;
+}
+
+.owl:hover .lowerbeak2 {
+    display: inline-block;
+    z-index: 1;
+}
+
+.owl:hover .eye-l {
+    transform: rotate(15deg);
+}
+.owl:hover .eye-r {
+    transform: rotate(-15deg);
+}
